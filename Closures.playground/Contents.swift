@@ -51,7 +51,7 @@ func someFunction(num: Int) -> (){ // The empty () means a return type of void.
     
 }
 
-// This is the anonymous function. 
+// This is the anonymous function.
 func printerFunction() -> (Int) -> () {
     var runningTotal = 0
     func printInteger(number: Int) {
@@ -95,7 +95,8 @@ func mathOperation(operation: (Int, Int) -> Int, a: Int, b: Int) -> Int {
 
 let difference = mathOperation(differenceBetweenNumbers, a: 20, b: 33)
 
-
+//See the document "The Swift Programming Language (Swift2) under the subheading "Function Types as Parameter Types"
+//It gives a detailed explanation about function types as parameter types.
 
 
 
