@@ -51,6 +51,7 @@ func someFunction(num: Int) -> (){ // The empty () means a return type of void.
     
 }
 
+// This is the anonymous function. 
 func printerFunction() -> (Int) -> () {
     var runningTotal = 0
     func printInteger(number: Int) {
