@@ -40,3 +40,43 @@ func isEvenNumber(i: Int) -> Bool {
 let ifEven = isEvenNumber
 
 let evenNumbers = allNumbers.filter(ifEven)
+
+
+////////////////////////
+//Capturing Variables
+////////////////////////
+
+// Returnings functions
+func someFunction(num: Int) -> (){ // The empty () means a return type of void.
+    
+}
+
+func printerFunction() -> (Int) -> () {
+    func printInteger(number: Int) {
+        print("The integer passed in is: \(number)")
+    }
+    return printInteger
+}
+
+let printAndREturnIntegerFunc = printerFunction()
+
+printAndREturnIntegerFunc(20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
