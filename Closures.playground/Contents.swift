@@ -52,8 +52,10 @@ func someFunction(num: Int) -> (){ // The empty () means a return type of void.
 }
 
 func printerFunction() -> (Int) -> () {
+    var runningTotal = 0
     func printInteger(number: Int) {
-        print("The integer passed in is: \(number)")
+        runningTotal += 10
+        print("The running total is: \(runningTotal)")
     }
     return printInteger
 }
@@ -64,10 +66,33 @@ printAndREturnIntegerFunc(20)
 
 
 
+let runningtotalFunction = printerFunction()
+runningtotalFunction(2)
+
+// Challenge 1 of 2
+//func mathOperation(operation: (Int, Int) -> Int, a: Int, b: Int) -> Int {
+//    return operation(a, b)
+//}
+
+// Challenge 2 of 2
+/**
+For this code challenge, let’s define a math operation as a function that
+carries out some work on two integers and returns an integer as well. An
+example is the function below, `differenceBetweenNumbers`, which takes two
+integers and calculates the difference between the numbers. After calculating,
+it returns the difference.
+*/
+
+func differenceBetweenNumbers(a: Int, b:Int) -> (Int) {
+    return a - b
+}
 
 
+func mathOperation(operation: (Int, Int) -> Int, a: Int, b: Int) -> Int {
+    return operation(a, b)
+}
 
-
+let difference = mathOperation(differenceBetweenNumbers, a: 20, b: 33)
 
 
 
